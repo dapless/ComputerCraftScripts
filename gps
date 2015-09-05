@@ -31,7 +31,7 @@ turtle.forward()
 	elseif direction==2 then --facing east
 		leftright=leftright+1
 	else 					--facing west
-		leftright=leftright-1
+		leftright=leftright-1--teehee
 	end
 end
 
