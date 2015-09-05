@@ -12,7 +12,7 @@ roomheight=1
 
 gps.up()
 if buildfloor then
-build.floor(5,14)
+build.floor(7,14)
 end
 
 if buildhall then
@@ -63,8 +63,11 @@ build.column(4)
 end
 if buildendroom then
 --build room at end of hall
-gps.goto(-3,15,1)
+gps.goto(14,-3,1)
 gps.facedirection(1)
+if buildfloor then
+build.floor(13,26)
+end
 build.room(roomheight,13,26)
 end
 --return to start

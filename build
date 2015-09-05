@@ -138,3 +138,39 @@ turtle.dig()
 turtle.dropDown(16)
 turtle.select(curslot)
 end
+
+function grid(gridwidth,spacing)
+for k=1, gridwidth do
+for f=1, gridwidth do
+digDown()
+placeDown()
+dig()
+gps.forward(spacing)
+end
+if (k<tonumber(gridwidth)) then
+	if floorflag==1 then
+		gps.turnRight()
+		dig()
+		gps.forward(spacing)
+		gps.turnRight()
+		dig()
+		gps.forward()
+		floorflag=0
+		
+	else 
+		gps.turnLeft()
+		dig()
+		gps.forward(spacing)
+		gps.turnLeft()
+		dig()
+		gps.forward()
+		floorflag=1
+	end
+else
+	gps.turnRight()
+	gps.turnRight()
+	gps.up()
+	gps.forward()
+end end
+print("done with floor")
+end
