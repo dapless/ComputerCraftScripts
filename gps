@@ -19,7 +19,7 @@ direction=1
 --]]
 function forward(howfar,avoid)
 howfar=howfar or 1
-for d=0,howfar do
+for d=1,howfar do
 --avoid colisions
 if avoid==false then
 build.dig()
