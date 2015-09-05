@@ -69,7 +69,7 @@ end end
 
 -- build 4 walls 
 function room(roomheight,width,length)--1st arg is hieght, second is width
---gps.up()
+
 for j=1,roomheight do
 layer(width,length)
 gps.up()
@@ -95,7 +95,7 @@ function wall(width)
 		print("wall layer: ",walllayer)
 		print("block number: ",blocknumber)
 		placeDown()
-		gps.forward()
+		gps.forward(1,true)
 	end
 end
 	
