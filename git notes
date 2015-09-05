@@ -1,0 +1,13 @@
+git ntoes
+
+git commit -a 
+"saves" changes
+
+git push 
+pushes changes to github.
+
+git pull origin master
+brings down changes from github.
+
+git add
+add file to list of tracked files.
