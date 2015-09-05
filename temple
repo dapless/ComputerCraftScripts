@@ -1,0 +1,53 @@
+--temple
+--build a temple
+
+os.loadAPI("reload")
+os.loadAPI("superAPI")
+
+args={...}
+
+--1st arg is temple height
+height=arg[1]
+
+--2nds arg is temple width
+width=arg[2]
+
+--3rd arg is height of base
+base=arg[3]
+
+upperwidth=width-2*base
+
+--build the base 
+for b=1,base do
+superAPI.floor(width)
+turtle.up()
+turtle.forward()
+turtle.turnRight()
+turtle.forward()
+end
+
+--build the walls and/or columns
+for s=1,4 do--sets up the wall building
+for l=1,upperwidth do--fill a wall with columns
+superAPI.column()
+turtle.forward()
+turtle.forward()
+superAPI.down()
+end
+turtle.right()
+end
+
+--build the roof
+for l=1,(upperwidth/2) do--determines how height the temple roof will be
+turtle.up()
+turtle.right()
+turtle.forward()
+turtle.left()
+f
+for w=1,upperwidth do--lay a the long side.
+reload.r()
+turtle.placeDown()
+endq
+
+end
+

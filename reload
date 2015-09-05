@@ -1,0 +1,13 @@
+curslot =1 
+function r()
+turtle.select(curslot)
+slotquantity=turtle.getItemCount(curslot)
+if slotquantity==0 then
+while turtle.getItemCount(curslot)==0 do
+curslot = curslot +1
+if curslot == 17 then 
+print("no more material!")
+curslot =1
+end 
+turtle.select(curslot)
+end end end

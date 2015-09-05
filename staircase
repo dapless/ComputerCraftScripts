@@ -1,0 +1,19 @@
+os.loadAPI("reload")
+
+args=[...]
+
+--build the staircase to the specified height
+
+height=args[1]
+
+function stair()
+
+for i=1,height do
+
+turtle.up()
+reload.r()
+turtle.placeDown()
+
+end end
+
+

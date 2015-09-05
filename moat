@@ -1,0 +1,31 @@
+--moat
+--laydown water and as it is created go back and grab some more
+
+
+--instuctions:
+--put a water bucket in the first and second slots.
+
+--move forward until the turtle reaches the end of the pit
+turtle.up()
+
+while not turtle.detect()
+
+--place first water block
+turtle.plsaceDown()
+
+--move forward two blocks
+turtle.forward()
+turtle.forward()
+
+--select second water bucket
+turtle.select(2)
+
+--place second water bucket creating a new water block between new and origonal
+turtle.placeDown()
+
+
+turtle.back()
+turtle.mineDown()
+turtle.select(1)
+
+end
