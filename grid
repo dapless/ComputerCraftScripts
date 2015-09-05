@@ -1,5 +1,5 @@
 os.loadAPI("build")
-os.loadAPI("build")
+os.loadAPI("gps")
 --build a grid system for easy building
 --usage: grid(size,spacing)
 print("rows/cols? ")
