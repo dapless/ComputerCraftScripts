@@ -1,4 +1,3 @@
---super API 
 --a list of usefull general purpose constructioin functions.
 
 os.loadAPI("gps")
@@ -142,7 +141,18 @@ end
 function grid(gridwidth,spacing)
 local avoid =false
 for k=1, gridwidth do
-for f=1, gridwidth do
+for f=1, gridwidthfunction layer(width,length)
+	for o=1,4 do
+	if (o==1) or (o==3) then
+		wall(length)
+	else
+		wall(width)
+	end
+	gps.turnRight()
+	end
+	walllayer=walllayer+1
+
+end do
 digDown()
 placeDown()
 dig()
@@ -171,4 +181,33 @@ else
 	
 end end
 print("done with grid")
+end
+
+function roofLayer(width,depth)
+	for o=1,4 do
+	if (o==1) or (o==3) then
+		wall(depth)
+	else
+		wall(width)
+	end
+	gps.turnRight()
+	end
+	walllayer=walllayer+1
+end
+
+function roof(width,depth,slopeLimit)
+for g=0,slopeLimit do
+roofLayer(width,depth)
+width=width-2
+depth=depth-2
+gps.up()
+gps.strafeEast(1)
+gps.strafeNorth(1)
+gps.facedirection(1)
+end
+gps.up()
+gps.strafeEast(1)
+gps.strafeNorth(1)
+gps.facedirection(1)
+floor(width,depth)
 end
