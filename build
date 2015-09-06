@@ -141,18 +141,7 @@ end
 function grid(gridwidth,spacing)
 local avoid =false
 for k=1, gridwidth do
-for f=1, gridwidthfunction layer(width,length)
-	for o=1,4 do
-	if (o==1) or (o==3) then
-		wall(length)
-	else
-		wall(width)
-	end
-	gps.turnRight()
-	end
-	walllayer=walllayer+1
-
-end do
+for f=1, gridwidth do
 digDown()
 placeDown()
 dig()
@@ -196,7 +185,8 @@ function roofLayer(width,depth)
 end
 
 function roof(width,depth,slopeLimit)
-for g=0,slopeLimit do
+gps.up()
+for g=1,slopeLimit do
 roofLayer(width,depth)
 width=width-2
 depth=depth-2
@@ -205,17 +195,17 @@ gps.strafeEast(1)
 gps.strafeNorth(1)
 gps.facedirection(1)
 end
-gps.up()
-gps.strafeEast(1)
-gps.strafeNorth(1)
-gps.facedirection(1)
 floor(width,depth)
+facedirection(1)
 end
 
 function rowofcols(length,height,spacing)
-while l=0<length do
+l=0
+while l<tonumber(length) do
 column(height)
-forward(spacing,false)
+
+gps.forward(spacing,false)
+gps.down(height)
 l=l+spacing
 end
 end
