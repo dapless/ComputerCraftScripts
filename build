@@ -97,6 +97,21 @@ function wall(width)
 		gps.forward(1,true)
 	end
 end
+
+function tallwall(width,height)--build a wall of arbitrary height
+gps.up()
+for h=1,height do
+wall(width)
+if gps.getDirection()==1 then
+gps.facedirection(3)
+placeDown()
+gps.up()
+else 
+gps.facedirection(1)
+placeDown()
+gps.up()
+
+end end end
 	
 	
 	

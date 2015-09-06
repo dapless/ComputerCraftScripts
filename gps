@@ -17,6 +17,10 @@ direction=1
 3=south
 4=west
 --]]
+function getDirection()
+return direction
+end
+
 function forward(howfar,avoid)
 howfar=howfar or 1
 for d=1,howfar do
