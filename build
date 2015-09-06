@@ -211,3 +211,11 @@ gps.strafeNorth(1)
 gps.facedirection(1)
 floor(width,depth)
 end
+
+function rowofcols(length,height,spacing)
+while l=0<length do
+column(height)
+forward(spacing,false)
+l=l+spacing
+end
+end
